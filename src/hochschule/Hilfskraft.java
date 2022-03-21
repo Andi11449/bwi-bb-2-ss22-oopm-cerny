@@ -4,7 +4,7 @@ public class Hilfskraft extends Person {
     public int matrikelnummer;
     public Arbeitsvertrag[] arbeitsvertraege;
 
-    public void addArbeitsvertrag(Datum anfang, Datum ende, int stunden) {
+    public Arbeitsvertrag addArbeitsvertrag(Datum anfang, Datum ende, int stunden) {
         Arbeitsvertrag av = new Arbeitsvertrag();
         av.anfang = anfang;
         av.ende = ende;
@@ -22,6 +22,7 @@ public class Hilfskraft extends Person {
         }
 
         arbeitsvertraege[arbeitsvertraege.length-1] = av;
+        return av;
     }
 
     @Override

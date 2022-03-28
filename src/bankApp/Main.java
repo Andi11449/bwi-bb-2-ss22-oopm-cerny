@@ -5,5 +5,6 @@ public class Main {
         BankApp bApp = new BankApp();
         bApp.createNewBankkonto();
         bApp.run();
+        System.out.println("Auf Wiedersehn!");
     }
 }

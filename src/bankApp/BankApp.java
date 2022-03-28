@@ -40,9 +40,13 @@ public class BankApp {
                         System.out.println("Nicht genug Geld vorhanden!");
                     break;
                 case "Stop":
-                    System.out.println("Auf Wiedersehn!");
+                    System.out.println("Bank App wird geschlossen!");
                     stop = true;
             }
         }
+    }
+
+    private void print(String m) {
+        System.out.println(m);
     }
 }

@@ -9,7 +9,7 @@ public class Bankkonto {
     }
 
     public boolean getMoney (double betrag) {
-        if( balance - betrag >= 0) {
+        if( balance >= betrag) {
             balance = balance - betrag;
             return true;
         }

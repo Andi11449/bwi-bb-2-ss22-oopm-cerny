@@ -1,6 +1,6 @@
-package shapes2;
+package shapes.demos;
 
-import shapes.Rectangle;
+import shapes.entities.Rectangle;
 
 public class RectangleDemo {
 

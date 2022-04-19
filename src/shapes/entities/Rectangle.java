@@ -1,4 +1,4 @@
-package shapes;
+package shapes.entities;
 
 public class Rectangle {
     private double width;

@@ -3,35 +3,34 @@ package shapes.entities;
 public class Rectangle {
     private double width;
     private double height;
-    private Position position;
+    private Position center;
 
-    public Position getPosition() {
-        return new Position(this.position);
+    public Position getCenter() {
+        //return this.position;
+        return new Position(this.center);
     }
 
     public void setXY(double x, double y) {
-        this.position.setX(x);
-        this.position.setY(y);
+        this.center.setX(x);
+        this.center.setY(y);
     }
 
-    public Rectangle(double width, double height, Position position){
+    public Rectangle(double width, double height, Position center){
         setWidth(width);
         setHeight(height);
-        this.position = position;
+        this.center = new Position(center);
     }
 
     public Rectangle(double width, double height){
-        setWidth(width);
-        setHeight(height);
-        this.position = new Position();
+        this(width, height, new Position());
     }
 
     public Rectangle(double length) {
-        this(length, length);
+        this(length, length, new Position());
     }
 
     public Rectangle(){
-        this(1, 1);
+        this(1, 1, new Position());
     }
 
     /**
@@ -41,7 +40,8 @@ public class Rectangle {
     public Rectangle(Rectangle rect){
         this.width = rect.width;
         this.height = rect.height;
-        this.position = new Position(rect.position);
+        //this.center = rect.center;
+        this.center = new Position(rect.center);
     }
 
     public void scale(double scaleW, double scaleH){
@@ -87,6 +87,6 @@ public class Rectangle {
 
     public void print(){
         System.out.printf("Rectangle (Width: %5.2f; Height: %5.2f; Area: %8.2f; " +
-                "PosX: %5.2f, PosY: %5.2f)\n", width, height, getArea(), position.getX(),  position.getY());
+                "PosX: %5.2f, PosY: %5.2f)\n", width, height, getArea(), center.getX(),  center.getY());
     }
 }

@@ -14,9 +14,9 @@ public class RectangleDemo {
         pos.setY(5);
         r2.setPosition(pos);*/
 
-        r2.setXY(4, 5);
+        r2.setXY(4, -1);
 
-        Position p = r2.getPosition();
+        Position p = r2.getCenter();
         System.out.printf("X: %.2f; Y: %.2f\n", p.getX(), p.getY());
         p.setX(30);
         System.out.printf("X: %.2f; Y: %.2f\n", p.getX(), p.getY());

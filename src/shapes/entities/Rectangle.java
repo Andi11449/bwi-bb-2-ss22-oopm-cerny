@@ -1,14 +1,13 @@
 package shapes.entities;
 
-public class Rectangle {
+public class Rectangle extends Shape {
     private double width;
     private double height;
-    private Position center;
 
     public Rectangle(double width, double height, Position center){
+        super(center);
         setWidth(width);
         setHeight(height);
-        this.center = new Position(center);
     }
 
     public Rectangle(double width, double height){
@@ -62,21 +61,14 @@ public class Rectangle {
         return height;
     }
 
-    public Position getCenter() {
-        //return this.position;
-        return new Position(this.center);
-    }
-
-    public void setXY(double x, double y) {
-        this.center.setXY(x, y);
-    }
-
-    public void move(double x, double y) {
-        this.center.shift(x, y);
-    }
-
+    @Override
     public double getArea(){
         return width * height;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return 2 * (width + height);
     }
 
     public void scale(double scaleW, double scaleH){
@@ -84,6 +76,7 @@ public class Rectangle {
         setHeight(height * scaleH);
     }
 
+    @Override
     public void scale(double scale){
         setWidth(width * scale);
         setHeight(height * scale);

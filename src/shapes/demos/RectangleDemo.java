@@ -29,9 +29,9 @@ public class RectangleDemo {
         r4.scale(5);
 
         //System.out.println(r2.getWidth() + " * " + r2.getHeight() + " = " + r2.getArea());
-        r1.print();
-        r2.print();
-        r3.print();
-        r4.print();
+        r1.display();
+        r2.display();
+        r3.display();
+        r4.display();
     }
 }

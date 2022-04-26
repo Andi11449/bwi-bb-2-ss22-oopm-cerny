@@ -3,10 +3,7 @@ package shapes.entities;
 public class Position {
     private double x, y;
 
-    public Position() {
-        x = 1;
-        y = 1;
-    }
+    public Position() {}
 
     public Position(double x, double y) {
         this.x = x;
@@ -32,5 +29,15 @@ public class Position {
 
     public void setY(double y) {
         this.y = y;
+    }
+
+    public void setXY(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public void shift(double x, double y) {
+        this.x += x;
+        this.y += y;
     }
 }

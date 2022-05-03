@@ -82,8 +82,20 @@ public class Rectangle extends Shape {
         setHeight(height * scale);
     }
 
+    @Override
     public void display(){
         System.out.printf("Rectangle (Width: %5.2f; Height: %5.2f; Area: %8.2f; " +
                 "PosX: %5.2f, PosY: %5.2f)\n", width, height, getArea(), center.getX(),  center.getY());
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "center=" + center +
+                ", width=" + width +
+                ", height=" + height +
+                ", area=" + getArea() +
+                ", perimeter=" + getPerimeter() +
+                '}';
     }
 }

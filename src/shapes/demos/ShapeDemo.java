@@ -13,10 +13,24 @@ public class ShapeDemo {
         for (Shape s : shapes) {
             if(s == null)
                 continue;
-            s.display();
+            prettyPrintShape(s);
         }
 
-        Shape shape = new Circle();
-        shape.display();
+        Rectangle r = new Rectangle(4, 43, new Position(-5, 4.3));
+        prettyPrintShape(r);
+
+        Rectangle r2 = new Rectangle();
+
+        //Shape shape = new Circle();
+        //shape.display();
+
+        System.out.println(r);
+        System.out.println(r2);
+    }
+
+    public static void prettyPrintShape(Shape s){
+        System.out.println("++++++++++");
+        s.display();
+        System.out.println("++++++++++");
     }
 }

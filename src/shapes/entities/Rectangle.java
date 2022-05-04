@@ -1,5 +1,7 @@
 package shapes.entities;
 
+import java.util.Objects;
+
 public class Rectangle extends Shape {
     private double width;
     private double height;
@@ -85,7 +87,26 @@ public class Rectangle extends Shape {
     @Override
     public void display(){
         System.out.printf("Rectangle (Width: %5.2f; Height: %5.2f; Area: %8.2f; " +
-                "PosX: %5.2f, PosY: %5.2f)\n", width, height, getArea(), center.getX(),  center.getY());
+        "PosX: %5.2f, PosY: %5.2f)\n", width, height, getArea(), center.getX(),  center.getY());
+        super.display();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null) return false;
+
+        if (o instanceof Rectangle){
+            Rectangle rectangle = (Rectangle) o;
+            return Double.compare(rectangle.width, width) == 0 && Double.compare(rectangle.height, height) == 0;
+        }
+
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(width, height);
     }
 
     @Override

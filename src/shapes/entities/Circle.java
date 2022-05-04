@@ -56,4 +56,12 @@ public class Circle extends Shape {
         System.out.printf("Circle (Radius: %5.2f; Area: %8.2f; " +
                 "PosX: %5.2f, PosY: %5.2f)\n", radius, getArea(), center.getX(),  center.getY());
     }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                ", center=" + center.toString() +
+                '}';
+    }
 }

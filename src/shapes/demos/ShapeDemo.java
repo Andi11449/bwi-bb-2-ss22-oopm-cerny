@@ -20,12 +20,14 @@ public class ShapeDemo {
         prettyPrintShape(r);
 
         Rectangle r2 = new Rectangle();
+        Rectangle r3 = new Rectangle();
 
         //Shape shape = new Circle();
         //shape.display();
 
-        System.out.println(r);
-        System.out.println(r2);
+        Circle c1 = new Circle();
+        System.out.println(c1);
+        System.out.println(r2.equals(r3));
     }
 
     public static void prettyPrintShape(Shape s){

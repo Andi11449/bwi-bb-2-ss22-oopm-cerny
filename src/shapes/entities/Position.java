@@ -43,9 +43,10 @@ public class Position {
 
     @Override
     public String toString() {
-        return "Position{" +
+        /*return "Position{" +
                 "x=" + x +
                 ", y=" + y +
-                '}';
+                '}';*/
+        return String.format("Position [x=%.1f; y=%.1f]", x, y);
     }
 }

@@ -1,5 +1,7 @@
 package shapes.entities;
 
+import java.util.Scanner;
+
 public class Position {
     private double x, y;
 
@@ -48,5 +50,13 @@ public class Position {
                 ", y=" + y +
                 '}';*/
         return String.format("Position [x=%.1f; y=%.1f]", x, y);
+    }
+
+    public void scan() {
+        Scanner sc = new Scanner(System.in); // create a scanner
+        System.out.print("x: ");
+        setX(sc.nextDouble()); // scan and set the x value
+        System.out.print("y: ");
+        setY(sc.nextDouble()); // scan and set the y value
     }
 }

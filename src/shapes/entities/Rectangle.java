@@ -1,6 +1,7 @@
 package shapes.entities;
 
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Rectangle extends Shape {
     private double width;
@@ -118,5 +119,17 @@ public class Rectangle extends Shape {
                 ", area=" + getArea() +
                 ", perimeter=" + getPerimeter() +
                 '}';
+    }
+
+    public void scan() {
+        System.out.println("Center");
+        center.scan(); // use Position's scan for scanning the center
+
+        System.out.println("Dimensions:");
+        Scanner sc = new Scanner(System.in); // create a scanner
+        System.out.print("width: ");
+        setWidth(sc.nextDouble()); // scan and set the width
+        System.out.print("height: ");
+        setHeight(sc.nextDouble()); // scan and set the height
     }
 }

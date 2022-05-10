@@ -48,12 +48,8 @@ public class Rectangle extends Shape {
     }
 
     public void setHeight(double height) {
-        if(width < 0){
+        if(height < 0){
             this.height = 0;
-            return;
-        }
-        if(width > 100){
-            this.height = 100;
             return;
         }
 
@@ -122,8 +118,7 @@ public class Rectangle extends Shape {
     }
 
     public void scan() {
-        System.out.println("Center");
-        center.scan(); // use Position's scan for scanning the center
+        super.scan();
 
         System.out.println("Dimensions:");
         Scanner sc = new Scanner(System.in); // create a scanner

@@ -1,6 +1,6 @@
 package shapes.entities;
 
-public abstract class Shape implements Scanable {
+public abstract class Shape implements Scanable, Displayable {
     protected Position center;
 
     public Shape(Position center){
@@ -37,10 +37,10 @@ public abstract class Shape implements Scanable {
 
     public abstract void scale(double scale);
 
-    public void display(){
+    /*public void display(){
         System.out.printf("Shape (Area: %8.2f; " +
                 "PosX: %5.2f, PosY: %5.2f)\n", getArea(), center.getX(),  center.getY());
-    }
+    }*/
 
     @Override
     public void scan() {

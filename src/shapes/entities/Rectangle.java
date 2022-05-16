@@ -81,12 +81,12 @@ public class Rectangle extends Shape {
         setHeight(height * scale);
     }
 
-    @Override
+    /*@Override
     public void display(){
         System.out.printf("Rectangle (Width: %5.2f; Height: %5.2f; Area: %8.2f; " +
         "PosX: %5.2f, PosY: %5.2f)\n", width, height, getArea(), center.getX(),  center.getY());
-        super.display();
-    }
+        // super.display();
+    }*/
 
     @Override
     public boolean equals(Object o) {

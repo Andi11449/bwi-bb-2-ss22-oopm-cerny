@@ -2,7 +2,7 @@ package shapes.entities;
 
 import java.util.Scanner;
 
-public class Position implements Scanable {
+public class Position implements Scanable, Displayable {
     private double x, y;
 
     public Position() {}

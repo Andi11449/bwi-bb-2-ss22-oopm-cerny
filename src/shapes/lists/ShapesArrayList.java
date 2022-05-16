@@ -2,7 +2,7 @@ package shapes.lists;
 
 import shapes.entities.Shape;
 
-public class ShapesArrayList extends ShapesList{
+public class ShapesArrayList implements ShapesList{
     private Shape[] data;
     private int nextIdx;
 

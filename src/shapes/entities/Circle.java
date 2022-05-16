@@ -62,6 +62,7 @@ public class Circle extends Shape {
         return "Circle{" +
                 "radius=" + radius +
                 ", center=" + center.toString() +
+                ", area=" + String.format("%.2f", getArea()) +
                 '}';
     }
 

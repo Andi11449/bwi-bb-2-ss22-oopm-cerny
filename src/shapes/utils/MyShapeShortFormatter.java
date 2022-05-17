@@ -1,9 +1,9 @@
 package shapes.utils;
 
 import shapes.entities.Shape;
-import shapes.utils.MyShapeFormatter;
+import shapes.utils.*;
 
-public class MyShapeShortFormatter extends MyShapeFormatter {
+public class MyShapeShortFormatter extends MyFormatter<Shape> {
     boolean withArea;
 
     public MyShapeShortFormatter(boolean withArea) {

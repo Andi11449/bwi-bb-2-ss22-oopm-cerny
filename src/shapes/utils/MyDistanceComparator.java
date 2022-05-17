@@ -2,7 +2,7 @@ package shapes.utils;
 
 import shapes.entities.Shape;
 
-public class MyDistanceComparator implements MyShapeComparator{
+public class MyDistanceComparator implements MyComparator<Shape> {
     @Override
     public int compare(Shape s1, Shape s2) {
         double d1 = Math.sqrt(Math.pow(s1.getCenter().getX(), 2) + Math.pow(s1.getCenter().getY(), 2));

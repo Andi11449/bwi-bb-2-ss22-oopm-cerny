@@ -1,15 +1,15 @@
 package shapes.lists;
 
-import shapes.entities.Shape;
+import shapes.entities.*;
 import shapes.utils.*;
 
-public class ShapesLinkedList implements ShapesList {
+public class MyLinkedList<T> implements MyList<T>{
 
     private class Node {
-        private Shape data;
+        private T data;
         private Node next;
 
-        public Node(Shape s) {
+        public Node(T s) {
             data = s;
         }
     }
@@ -17,9 +17,9 @@ public class ShapesLinkedList implements ShapesList {
     private Node head;
     private int length;
 
-    public ShapesLinkedList(){}
+    public MyLinkedList(){}
 
-    public void add(Shape s) {
+    public void add(T s) {
         Node n = new Node(s);
 
         length++;
@@ -40,7 +40,7 @@ public class ShapesLinkedList implements ShapesList {
         return length;
     }
 
-    public Shape get(int idx) {
+    public T get(int idx) {
         Node node = getNode(idx);
         return node == null ? null : node.data;
     }
@@ -75,7 +75,7 @@ public class ShapesLinkedList implements ShapesList {
         cur.next = cur.next.next;
     }
 
-    public void sort(MyShapeComparator comparator) {
+    public void sort(MyComparator<T> comparator) {
         boolean swapped;
         int i = 0;
         do{
@@ -86,7 +86,7 @@ public class ShapesLinkedList implements ShapesList {
                 Node secondNode = getNode(k);
 
                 if(comparator.compare(firstNode.data, secondNode.data) > 0 ){
-                    Shape tmp = firstNode.data;
+                    T tmp = firstNode.data;
                     firstNode.data = secondNode.data;
                     secondNode.data = tmp;
                     swapped = true;

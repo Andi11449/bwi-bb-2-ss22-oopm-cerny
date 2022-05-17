@@ -2,9 +2,9 @@ package shapes.utils;
 
 import shapes.entities.Shape;
 
-public class MyShapeDefaultFormatter extends MyShapeFormatter{
+public class MyDefaultFormatter<T> extends MyFormatter<T>{
     @Override
-    public String format(Shape s) {
+    public String format(T s) {
         return s.toString();
     }
 }

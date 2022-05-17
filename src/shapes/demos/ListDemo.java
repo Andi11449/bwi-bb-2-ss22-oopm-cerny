@@ -2,13 +2,11 @@ package shapes.demos;
 
 import shapes.lists.*;
 import shapes.entities.*;
-import shapes.utils.MyAreaComparator;
-import shapes.utils.MyDistanceComparator;
-import shapes.utils.MyShapeComparator;
+import shapes.utils.*;
 
 public class ListDemo {
     public static void main(String[] args) {
-        ShapesLinkedList list = new ShapesLinkedList();
+        MyLinkedList<Shape> list = new MyLinkedList<>();
         list.add(new Rectangle(4, 53, new Position(33, 4)));
         list.add(new Rectangle(45, 1, new Position(3, 1)));
         list.add(new Circle(12, new Position(4, 12)));
@@ -29,11 +27,44 @@ public class ListDemo {
         list.sort(new MyDistanceComparator());
         printList(list);
 
+        System.out.println();
+
+        list.sort(new MyStringComparator<Shape>());
+        printList(list);
+        System.out.println();
+
+
+        MyLinkedList<Position> posList = new MyLinkedList<>();
+        posList.add(new Position(-3, 127));
+        posList.add(new Position(34, 12));
+        posList.add(new Position(-1234, 123));
+
+        printList(posList);
+
+        MyLinkedList<Scanable> scanList = new MyLinkedList<>();
+        for (int i = 0; i < list.length(); i++) {
+            scanList.add(list.get(i));
+        }
+        for (int i = 0; i < posList.length(); i++) {
+            scanList.add(posList.get(i));
+        }
+        System.out.println();
+        printList(scanList);
+
+        //addElements(scanList, list);
+        //addElements(scanList, posList);
+
         //System.out.println(list.get(192));
         //System.out.println(list.get(-1));
     }
 
-    private static void printList(ShapesList list) {
+    /*private static <T, A> void addElements(MyLinkedList<T> scanList, MyLinkedList<A implements T> list) {
+        for (int i = 0; i < list.length(); i++) {
+            scanList.add(list.get(i));
+        }
+    }*/
+
+    private static <T> void printList(MyLinkedList<T> list) {
         for (int i = 0; i < list.length(); i++) {
             System.out.println(list.get(i));
         }

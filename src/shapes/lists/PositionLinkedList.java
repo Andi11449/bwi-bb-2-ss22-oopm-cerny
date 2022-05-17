@@ -1,15 +1,14 @@
 package shapes.lists;
 
-import shapes.entities.Shape;
-import shapes.utils.*;
+import shapes.entities.*;
 
-public class ShapesLinkedList implements ShapesList {
+public class PositionLinkedList {
 
     private class Node {
-        private Shape data;
+        private Position data;
         private Node next;
 
-        public Node(Shape s) {
+        public Node(Position s) {
             data = s;
         }
     }
@@ -17,9 +16,9 @@ public class ShapesLinkedList implements ShapesList {
     private Node head;
     private int length;
 
-    public ShapesLinkedList(){}
+    public PositionLinkedList(){}
 
-    public void add(Shape s) {
+    public void add(Position s) {
         Node n = new Node(s);
 
         length++;
@@ -40,7 +39,7 @@ public class ShapesLinkedList implements ShapesList {
         return length;
     }
 
-    public Shape get(int idx) {
+    public Position get(int idx) {
         Node node = getNode(idx);
         return node == null ? null : node.data;
     }
@@ -75,18 +74,18 @@ public class ShapesLinkedList implements ShapesList {
         cur.next = cur.next.next;
     }
 
-    public void sort(MyShapeComparator comparator) {
+    /* public void sort(MyShapeComparator comparator) {
         boolean swapped;
         int i = 0;
         do{
             swapped = false;
             for(int k=1; k<length-i; k++){
 
-                Node firstNode = getNode(k-1);
-                Node secondNode = getNode(k);
+                PositionNode firstNode = getNode(k-1);
+                PositionNode secondNode = getNode(k);
 
                 if(comparator.compare(firstNode.data, secondNode.data) > 0 ){
-                    Shape tmp = firstNode.data;
+                    Position tmp = firstNode.data;
                     firstNode.data = secondNode.data;
                     secondNode.data = tmp;
                     swapped = true;
@@ -94,5 +93,5 @@ public class ShapesLinkedList implements ShapesList {
 
             } i++;
         }while(swapped);
-    }
+    } */
 }

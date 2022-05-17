@@ -4,6 +4,7 @@ import shapes.lists.*;
 import shapes.entities.*;
 import shapes.utils.MyAreaComparator;
 import shapes.utils.MyDistanceComparator;
+import shapes.utils.MyShapeComparator;
 
 public class ListDemo {
     public static void main(String[] args) {

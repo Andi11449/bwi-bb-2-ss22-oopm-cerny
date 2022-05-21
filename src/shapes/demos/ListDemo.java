@@ -56,7 +56,7 @@ public class ListDemo {
         printList(scanList);
     }
 
-    private static <T, A extends T> void addElements(MyLinkedList<T> scanList, MyLinkedList<A> list) {
+    private static <T> void addElements(MyLinkedList<T> scanList, MyLinkedList<? extends T> list) {
         for (int i = 0; i < list.length(); i++) {
             scanList.add(list.get(i));
         }

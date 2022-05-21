@@ -42,6 +42,7 @@ public class ListDemo {
         printList(posList);
 
         MyLinkedList<Scanable> scanList = new MyLinkedList<>();
+
         addElements(scanList, list);
         addElements(scanList, posList);
         /*for (int i = 0; i < list.length(); i++) {
@@ -50,14 +51,9 @@ public class ListDemo {
         for (int i = 0; i < posList.length(); i++) {
             scanList.add(posList.get(i));
         }*/
+
         System.out.println();
         printList(scanList);
-
-        //addElements(scanList, list);
-        //addElements(scanList, posList);
-
-        //System.out.println(list.get(192));
-        //System.out.println(list.get(-1));
     }
 
     private static <T, A extends T> void addElements(MyLinkedList<T> scanList, MyLinkedList<A> list) {

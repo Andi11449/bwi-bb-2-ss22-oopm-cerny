@@ -4,7 +4,7 @@ import shapes.lists.*;
 import shapes.entities.*;
 import shapes.utils.*;
 
-public class ListDemo {
+public class MyListDemo {
     public static void main(String[] args) {
         MyLinkedList<Shape> list = new MyLinkedList<>();
         list.add(new Rectangle(4, 53, new Position(33, 4)));
@@ -61,6 +61,18 @@ public class ListDemo {
             scanList.add(list.get(i));
         }
     }
+
+    /*private static <T> void addElements(MyLinkedList<? super T> scanList, MyLinkedList<T> list) {
+        for (int i = 0; i < list.length(); i++) {
+            scanList.add(list.get(i));
+        }
+    }
+
+    private static <T, A extends T> void addElements(MyLinkedList<T> scanList, MyLinkedList<A> list) {
+        for (int i = 0; i < list.length(); i++) {
+            scanList.add(list.get(i));
+        }
+    }*/
 
     private static <T> void printList(MyLinkedList<T> list) {
         for (int i = 0; i < list.length(); i++) {

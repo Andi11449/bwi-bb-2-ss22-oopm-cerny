@@ -3,6 +3,8 @@ package shapes.lists;
 import shapes.entities.*;
 import shapes.utils.*;
 
+import java.util.Comparator;
+
 public class MyLinkedList<T> implements MyList<T>{
 
     private class Node {
@@ -75,7 +77,7 @@ public class MyLinkedList<T> implements MyList<T>{
         cur.next = cur.next.next;
     }
 
-    public void sort(MyComparator<T> comparator) {
+    public void sort(Comparator<T> comparator) {
         boolean swapped;
         int i = 0;
         do{

@@ -1,6 +1,8 @@
 package shapes.utils;
 
-public class MyStringComparator<T> implements MyComparator<T>{
+import java.util.Comparator;
+
+public class MyStringComparator<T> implements Comparator<T> {
 
     @Override
     public int compare(T s1, T s2) {

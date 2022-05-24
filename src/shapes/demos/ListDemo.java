@@ -2,9 +2,7 @@ package shapes.demos;
 
 import shapes.entities.*;
 import java.util.*;
-import shapes.utils.MyAreaComparator;
-import shapes.utils.MyDistanceComparator;
-import shapes.utils.MyStringComparator;
+import shapes.utils.*;
 
 public class ListDemo {
     public static void main(String[] args) {
@@ -21,7 +19,9 @@ public class ListDemo {
         System.out.println();
 
         //list.remove(1);
-        list.sort(new MyAreaComparator());
+        //list.sort(new MyAreaComparator());
+        //Collections.sort(list, new MyAreaComparator());
+        Collections.sort(list);
         printList(list);
 
         System.out.println();
@@ -32,6 +32,10 @@ public class ListDemo {
         System.out.println();
 
         list.sort(new MyStringComparator<Shape>());
+        printList(list);
+        System.out.println();
+
+        list.sort(new MyPerimeterComparator());
         printList(list);
         System.out.println();
 

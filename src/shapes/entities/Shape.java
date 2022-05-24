@@ -1,6 +1,8 @@
 package shapes.entities;
 
-public abstract class Shape implements Scanable, Displayable {
+import java.util.Objects;
+
+public abstract class Shape implements Scanable, Displayable, Comparable<Shape> {
     protected Position center;
 
     public Shape(Position center){
@@ -46,5 +48,10 @@ public abstract class Shape implements Scanable, Displayable {
     public void scan() {
         System.out.println("Center");
         center.scan(); // use Position's scan for scanning the center
+    }
+
+    @Override
+    public int compareTo(Shape s) {
+        return Double.compare(this.getArea(), s.getArea());
     }
 }

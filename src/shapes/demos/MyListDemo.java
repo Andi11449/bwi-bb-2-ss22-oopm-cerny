@@ -44,7 +44,7 @@ public class MyListDemo {
         MyList<Displayable> displayList = new MyLinkedList<>();
 
         addAll(displayList, list);
-        displayList.addAll(posList);
+        addAll(displayList, posList);
         /*for (int i = 0; i < list.length(); i++) {
             scanList.add(list.get(i));
         }

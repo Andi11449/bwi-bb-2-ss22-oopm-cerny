@@ -17,13 +17,13 @@ public class IterableDemo {
         numbers.add(-35);
         numbers.add(45);
 
-        int n1 = numbers.size();
+        /*int n1 = numbers.size();
         for (int i = 0; i < n1; i++) {
             if(numbers.get(i) < 0){
                 numbers.remove(i);
                 //i--;
             }
-        }
+        }*/
 
         Iterator<Integer> it = numbers.iterator();
         while (it.hasNext()){

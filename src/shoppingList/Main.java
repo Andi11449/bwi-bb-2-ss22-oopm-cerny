@@ -11,5 +11,14 @@ public class Main {
         list.display();
         list.sortByPrice();
         list.display();
+
+        //list.writeToFile("F:\\shoppingList.txt");
+        //list.writeToFile("shoppingList.txt");
+
+        ShoppingList list2 = new ShoppingList();
+        list2.readFromFile("shoppingList.txt");
+        list2.addItem("Sugar", 1.39F, 1);
+        list2.sortByQuantity();
+        list2.writeToFile("shoppingList2.txt");
     }
 }

@@ -6,6 +6,12 @@ import org.testng.annotations.Test;
 
 public class Tests {
 
+    @Test
+    public void testGrade() {
+        int g = Main.grade(55);
+        Assert.assertEquals(g, 5);
+    }
+
     @Test(dataProvider = "test_grade_data")
     public void testGradeParameterized(int credits, int grade) {
         int g = Main.grade(credits);

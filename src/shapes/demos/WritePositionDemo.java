@@ -21,7 +21,6 @@ public class WritePositionDemo {
             writer.write("x,y\n");
             for (Position pos : positions) {
                 writer.write(String.format(Locale.ROOT,"%f,%f\n", pos.getX(), pos.getY()));
-
             }
         } catch (IOException e) {
             e.printStackTrace();

@@ -55,7 +55,8 @@ public class ReadPositionDemo {
             return p;
         }
         catch (NumberFormatException e){
-            throw new MyParseException("Format exception in line: " + line, e);
+            throw new IllegalArgumentException("Format exception in line: " + line, e);
+            //throw new MyParseException("Format exception in line: " + line, e);
             //System.out.println(e.getMessage());
             //return null;
         }

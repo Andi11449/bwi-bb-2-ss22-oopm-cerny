@@ -1,0 +1,12 @@
+OS008 from VIE (2018-06-01 06:30 (UTC)) to CDG (2018-06-01 08:05 (UTC)) with a crew of 0 and 0 passengers <no vessel> boarding not completed 
+[]
+[]
+OS001 from VIE (2018-06-23 06:30 (UTC)) to VIE (2018-06-23 08:55 (UTC)) with a crew of 1 and 3 passengers <C4 4> boarding not completed 
+[Pilot DOE John (AT00004711)]
+[DOE Jack (UK00000007) [OS006], JACKSON John (US00004711) [OS006], DOE Jane (AT00000815) [OS006]]
+OS007 from VIE (2018-06-28 21:00 (UTC)) to CDG (2018-06-29 00:05 (UTC)) with a crew of 0 and 3 passengers <no vessel> boarding not completed 
+[]
+[DOE Jack (UK00000007) [OS006], JACKSON John (US00004711) [OS006], DOE Jane (AT00000815) [OS006]]
+OS001 from VIE (2018-07-25 04:30 (UTC)) to JFK (2018-07-25 07:20 (UTC)) with a crew of 0 and 3 passengers <no vessel> boarding not completed 
+[]
+[DOE Jack (UK00000007) [OS006], JACKSON John (US00004711) [OS006], DOE Jane (AT00000815) [OS006]]

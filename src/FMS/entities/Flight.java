@@ -127,7 +127,10 @@ public abstract class Flight implements Comparable<Flight> {
 	}
 
 	public boolean add(Passenger passenger) {
-		return passengers.add(passenger);
+		if(passenger != null || vessel == null || vessel.getCapactiy() > passengers.size())
+			return passengers.add(passenger);
+
+		return false;
 	}
 
 	public boolean readyToBoard() {
